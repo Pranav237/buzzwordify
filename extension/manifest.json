@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Buzzwordify",
+  "version": "0.1.0",
+  "description": "Transform highlighted text into pompous corporate/scientific bombast.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>", "http://localhost:3000/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["overlay.css"]
+    }
+  ],
+  "commands": {
+    "buzzwordify": {
+      "suggested_key": {
+        "default": "Alt+B"
+      },
+      "description": "Buzzwordify the selected text"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+#buzzwordify-overlay {
+  position: absolute;
+  z-index: 2147483647;
+  max-width: 340px;
+  padding: 12px 16px;
+  background: #1a1a2e;
+  color: #e0e0ff;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  cursor: default;
+  word-wrap: break-word;
+}
+
+#buzzwordify-overlay.buzzwordify-error {
+  background: #2e1a1a;
+  color: #ffcccc;
+}
